@@ -8,4 +8,5 @@ public interface IEmployeeService {
 
 	public Integer saveEmployee(Employee e);
 	public List<Employee> getAllEmployees();
+	public void deleteEmployee(Integer id);
 }

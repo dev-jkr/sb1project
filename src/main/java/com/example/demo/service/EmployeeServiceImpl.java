@@ -29,4 +29,11 @@ public class EmployeeServiceImpl implements IEmployeeService{
 		return list;
 	}
 
+	@Override
+	public void deleteEmployee(Integer id) {
+		// TODO Auto-generated method stub
+		repo.deleteById(id);
+		
+	}
+
 }

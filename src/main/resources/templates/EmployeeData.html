@@ -7,8 +7,26 @@
 </head>
 <body>
 	<h3>Employee Data</h3>
-	
-	<span th:text="${message}"></span>
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>NAME</td>
+			<td>EMAIL</td>
+			<td>GENDER</td>
+			<td>ADDRESS</td>
+			<td>PROJECTS</td>
+			<td>SLOTS</td>
+		</tr>
+		<tr th:each="ob:${list}">
+			<td th:text="${ob.id}"></td>
+			<td th:text="${ob.ename}"></td>
+			<td th:text="${ob.email}"></td>
+			<td th:text="${ob.gender}"></td>
+			<td th:text="${ob.eaddr}"></td>
+			<td th:text="${ob.prjs}"></td>
+			<td th:text="${ob.slots}"></td>
+		</tr>
+	</table>
 	
 </body>
 </html>
