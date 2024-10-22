@@ -16,6 +16,7 @@
 			<td>ADDRESS</td>
 			<td>PROJECTS</td>
 			<td>SLOTS</td>
+			<td>OPERATIONS</td>
 		</tr>
 		<tr th:each="ob:${list}">
 			<td th:text="${ob.id}"></td>
@@ -25,8 +26,11 @@
 			<td th:text="${ob.eaddr}"></td>
 			<td th:text="${ob.prjs}"></td>
 			<td th:text="${ob.slots}"></td>
+			<td>
+				<a href="@{/employee/delete(id=${ob.id})}">DELETE</a>
+			</td>
 		</tr>
 	</table>
-	
+<span th:text="${message}"></span>
 </body>
 </html>
